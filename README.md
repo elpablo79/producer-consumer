@@ -8,12 +8,24 @@ An input file with a list of URLs to be retrieved is processed and a list of URL
 The libraries that need to be installed are specified in the file requirements.txt.
 
 ## How to use
+Clone (or download and unzip) the repository and move inside the producer-consumer folder.
 
-1. A file called input inside the data folder contains a single URL per line
+Create a new Python virtual environment:
+```
+python3 -m venv env
+```
+Activate the virtual environment and install the dependencies:
+```
+source env/bin/activate
+pip install -r requirements.txt
+```
+There is a file called input inside the data folder that contains a single URL per line: feel free to modify it with the URLs you want to use.
 
-2. Run the file main.py
-
-3. The output file is written inside the data folder
+Run the main file:
+```
+python3 main.py
+```
+The output file will be written inside the data folder.
 
 The output is in CSV format, containing the provided URLs from the input file with the extracted URLs following it.
 If there are errors while retrieving any URL or parsing its content, those URLs are not considered.
